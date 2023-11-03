@@ -1,0 +1,21 @@
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#reg_main{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.err_msg_disabled{
+    visibility: hidden;
+}
+
+.err_msg_enabled{
+    visibility: visible;
+}
+

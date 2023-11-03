@@ -1,0 +1,82 @@
+
+  
+
+    <%- include("./common/header.ejs",{style_css:style_css}); %>
+
+
+    
+
+    <main id="login_main">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-3"></div>
+
+                <div class="col-3 shadow p-5 rounded login_form_container">
+                    <div class="row text-center fw-bold display-6">Sign In</div>
+
+                    <div class="row mt-4">
+                        <label for="id_username_field" class="h6 fw-bold">Username</label>
+                    </div>
+
+                    <div class="row text-center">
+                        <input type="text" class="form-control" id="id_username_field">
+                    </div>
+                    <div class="row">
+                        <small class="text-danger err_msg_disabled" id="err_username_field">.</small>
+                    </div>
+
+
+                    
+                    <div class="row mt-4">
+                        <label for="id_password_field" class="h6 fw-bold">Password</label>
+                    </div>
+
+                    <div class="row text-center">
+                        <input type="password" class="form-control" id="id_password_field">
+                    </div>
+                    <div class="row">
+                        <small class="text-danger err_msg_disabled" id="err_password_field">.</small>
+                    </div>
+
+
+
+
+
+                    <div class="row text-center mt-4">
+                        <button type="button" class="btn btn-outline-dark" id="signin_btn">Sign In</button>
+                    </div>
+
+                </div>
+
+                <div class="col-3 shadow p-5 rounded bg-body">
+                    <div class="row">
+                        <p class="text-dark display-6 text-center fw-bold">Welcome To Login</p>
+                    </div>
+
+                    <div class="row">
+                        <p class="text-dark h6 text-center fw-bold">Don't have an account?</p>
+                    </div>
+
+                    <div class="row">
+                        <button type="button" class="btn btn-outline-dark">Sign Up</button>
+                    </div>
+                </div>
+
+                <div class="col-3"></div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+
+
+
+    <%- include("./common/footer.ejs",{script_name:script_name}); %>
+
+
+ 

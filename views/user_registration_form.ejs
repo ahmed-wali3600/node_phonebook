@@ -1,0 +1,208 @@
+
+
+
+
+  <%- include("./common/header.ejs",{style_css:style_css}); %>
+
+  <main id="reg_main">
+
+    <div class="container my-5">
+      <div class="row justify-content-center">
+          <div class="col-md-6 signup">
+              <div class='form-group'>
+  
+  
+  
+  
+                 <label id='i_label_for_fname' for="signup_fname" class="fw-bold">First Name <span class="text-danger">*</span></label>
+                 <div class="input-group mb-1">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fa-solid fa-id-card-clip" id="icon_for_fname"></i>
+                        </span>  
+                    <input type='text' aria-label="First Name" placeholder="First Name"  aria-describedby="basic-addon1" class='form-control c_signup_fname' id="signup_fname">
+                  </div>
+                  <small class='form-text text-danger d-block mb-3 err_msg_disabled' id="error_msg_fname">.</small>
+                 
+                 
+  
+  
+  
+  
+                 <hr class="hr_disable my-1">
+  
+  
+  
+                 <label id='i_label_for_lname' for="signup_lname" class="fw-bold">Last Name <span class="text-danger">*</span></label>
+                 <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fa-solid fa-id-card-clip" id="icon_for_lname"></i>
+                        </span>  
+                    <input type='text' aria-label="Last Name" placeholder="Last Name"  aria-describedby="basic-addon1" class='form-control c_signup_lname' id="signup_lname">
+                  </div>
+                 <small class='form-text text-danger d-block mb-3 err_msg_disabled' id="error_msg_lname">.</small>
+     
+  
+  
+  
+  
+  
+                 <hr class="hr_disable my-1">
+  
+  
+  
+  
+  
+                 <label id='i_label_for_dob' for="signup_dob" class="fw-bold">Date Of Birth <span class="text-danger">*</span></label>
+                 <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fa-solid fa-calendar" id="icon_for_dob"></i>
+                        </span>  
+                    <input type="date" aria-label="Date Of Birth" aria-describedby="basic-addon1" class='form-control c_signup_dob' id="signup_dob" min="" max="">
+                    </div>
+                  </div>
+                 <small class='form-text text-danger d-block mb-3 err_msg_disabled' id="error_msg_dob">.</small>
+  
+  
+  
+  
+  
+                  <hr class="hr_disable my-1">
+  
+  
+  
+  
+                <label id='i_label_for_gender' for="signup_gender" class="fw-bold">Gender <span class="text-danger">*</span></label>
+                <div class='form-check d-flex align-items-center'>
+                    <input type='radio' class='form-check-input' value='Male' name='n_gender' id='id_male' checked>
+                    <label for='id_male' class='form-check-label'>Male</label>
+                </div>
+  
+                <div class='form-check d-flex align-items-center'>
+                    <input type='radio' class='form-check-input' value='Female' name='n_gender' id='id_female'>
+                    <label for='id_female' class='form-check-label'>Female</label>
+                </div>  
+                <small class='form-text text-danger d-block mb-3 err_msg_disabled' id="error_msg_gender">.</small>
+  
+  
+  
+  
+  
+  
+                <hr class="hr_disable my-1">
+  
+  
+  
+  
+  
+                <div class="form-group">
+                    <label id='i_label_for_pic' for="signup_pic" class="fw-bold">Select Profile Pic </label>
+                    <input type="file" accept=".png,.jpeg,.jpg" class="form-control-file c_signup_pic" id="signup_pic">
+                </div>
+                <small class='form-text text-danger d-block mb-3 err_msg_disabled' id="error_msg_pic">.</small>
+  
+  
+  
+                <hr class="hr_disable my-1">
+  
+  
+  
+  
+                <label id="i_label_for_email" for="signup_email" class="fw-bold">E-Mail <span class="text-danger">*</span></label>
+                 <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fa-solid fa-envelope" id="icon_for_email"></i>
+                        </span>  
+                    <input type='email' aria-label="E-Mail" placeholder="E-Mail"  aria-describedby="basic-addon1" class='form-control c_signup_email' id="signup_email">
+                  </div>
+                 <small class='form-text text-danger d-block mb-3 err_msg_disabled' id="error_msg_email">.</small>
+  
+  
+  
+  
+                 <hr class="hr_disable my-1">
+  
+  
+  
+  
+                 <label id='i_label_for_username' for="signup_username" class="fw-bold">Username <span class="text-danger">*</span></label>
+                 <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                      <i class="fa-solid fa-user" id="icon_for_username"></i>
+                    </span>  
+                    <input type='text' minlength='4' aria-label="Username" placeholder="Username"  aria-describedby="basic-addon1" class='form-control c_signup_username' id="signup_username">
+                </div>
+                 <small class='form-text text-danger d-block mb-3 err_msg_disabled' id="error_msg_username">.</small>
+  
+  
+  
+  
+  
+  
+  
+                 <hr class="hr_disable my-1">
+  
+  
+  
+  
+  
+  
+                 <label id="i_label_for_password" for="signup_password" class="fw-bold">Password <span class="text-danger">*</span></label>
+                 <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-key" id="icon_for_password"></i></span>
+                    <input type='password' aria-describedby="basic-addon1" placeholder="Password" aria-label="Password" class='form-control c_signup_password' id="signup_password">
+                 </div>
+                 <small class='form-text text-danger d-block mb-3 err_msg_disabled mb-3' id="error_msg_password">.</small>
+    
+  
+                 
+                 <button type="button" id="i_signup_btn" class="btn btn-success form-control">Create Account</button>
+                 
+                </div>
+          </div>
+      </div>
+  </div>
+  
+
+
+  </main>
+
+
+  
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="msg_box" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Success Message</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+
+        <div class="modal-body">
+          <h2 class="text-success">Account Created Successfully!!</h2>
+        </div>
+
+
+        <div class="modal-footer text-center">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+          <button type="button" class="btn btn-primary" id="msg_box_btn">Ok</button>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <%- include("./common/footer.ejs",{script_name:script_name}); %>

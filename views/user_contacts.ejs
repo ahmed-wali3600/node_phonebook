@@ -1,0 +1,87 @@
+<%- include("./common/header.ejs",{style_css:style_css}); %>
+
+<%- include("./common/nav-bar.ejs"); %>
+
+
+
+
+
+
+    
+
+    <main class="container mt-5" id="table_container">
+
+        
+        <div class="row">
+            <div class="col d-flex justify-content-center align-items-center">
+
+
+                <% if(user_contacts.length>0){ %>
+                <table class="table table-bordered table-dark table-striped table-hover">
+                    <tr class="text-center fw-bold custom_font_tb_head">
+                        <td>#</td>
+                        <td>Contact Name</td>
+                        <td>Contact Number</td>
+                        <td>Action</td>
+                    </tr>
+                    
+                    <% for(let counter=0;counter<user_contacts.length;counter++){ %>
+                
+                        <tr>
+                            <td class="text-center"><%= (counter+1) %></td>
+                            <td><%= user_contacts[counter]['Contact_Name'] %></td>
+                            <td><%= user_contacts[counter]['Contact_Number'] %></td>
+                            <td class="text-center">
+                                
+                                <button class="btn btn-success update_btn" data-cnid="<%= user_contacts[counter]['Contact_Number_Id'] %>" data-cnumber="<%= user_contacts[counter]['Contact_Number'] %>" data-cname="<%= user_contacts[counter]['Contact_Name'] %>" data-cid="<%= user_contacts[counter]['Contact_Id']; %>">Update</button>
+                                <button class="btn btn-danger delete_btn" data-cid="<%= user_contacts[counter]['Contact_Id']; %>">Delete</button>
+
+                            </td>
+                        </tr>
+                
+                    <% } %>
+        
+                </table>
+
+                <% 
+                }
+                else
+                {
+                    %>
+
+                    <h1>No Record Found</h1>
+                    <%
+                }
+                 %>
+
+
+
+            </div>
+        </div>
+
+        
+
+    </main>
+
+    
+
+
+
+
+<div class="modal fade" id="action_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+        <div id="modal_structure">
+
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<%- include("./common/footer.ejs",{script_name:script_name}); %>
